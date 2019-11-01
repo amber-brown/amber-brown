@@ -6,23 +6,19 @@ description: "An introduction to immutability within Javascript"
 
 ## What is immutability?
 
-Immutability is an important principle of functional programming.
+> Immutable - unchanging over time or unable to be changed.
 
-> Mutable - liable or subject to change or alteration.
-
-Immutable variables are the opposite of this. They are unchangeable. This means that after they are created their state should not be updated or modified.
+Immutability is an important principle of functional programming. Once an object or variable has been created, it should never change. If something about the variable or object needs to change, a copy should be taken, leaving the original state unaltered.
 
 ## Why should we use it?
 
-Immutability helps us to write cleaner and safer code. If we cannot edit the state of variables or objects in our code, this lessens our chances of getting unexpected results. For this reason, our code also becomes easier to debug. This is because the input if always known, making our workflow more efficient.
-
-Our code also becomes simpler to test. We have a known input and an expected output.
+Immutability helps us to write cleaner and safer code. If we cannot edit the state of variables or objects in our code, this lessens our chances of getting unexpected results. For this reason, our code also becomes easier to debug, test and predict.
 
 ## Immutability in Arrays
 
-Lets say we have a pizza ordering system. Every pizza has the same base made up of bread, tomato and cheese. We can store this is an array. We will need to add the unique ingredients to the order.
+Let's say we have a pizza ordering system. Every pizza has the same base made up of bread, tomato, and cheese. A customer will choose their unique toppings for their pizza order.
 
-So, we could do this in the following way:
+The base never changes so we can store this in an array, we could then add the ingredients in the following way:
 
 ```javascript
 const pizzaBase = [🥖, 🍅, 🧀];
@@ -33,9 +29,9 @@ console.log(pizzaBase);
 //> (4) [🥖, 🍅, 🧀, 🍗, 🌽];
 ```
 
-However, this has changed the pizzaBase variable. This means, that when the next order comes in, we are starting with the last ingredients. This is going to quickly become confusing!
+However, this has changed the `pizzaBase` variable. This means, that when the next order comes in, we are starting with the last ingredients. This is going to become confusing!
 
-But writing the code in an Immutable way means that we can use the base. An example of how we can do this is:
+But writing the code in an immutable way means that we can use the base for all future orders. Look at the following example:
 
 ```javascript
 const pizzaBase = [🥖, 🍅, 🧀];
@@ -53,13 +49,13 @@ console.log(pizzaOrder2);
 //> (4) [🥖, 🍅, 🧀, 🍤];
 ```
 
-By using [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) syntax, we are effectively rewriting the array with the extra ingredients added on the end. This means that we are always going to have the same base.
+By using [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) we can take a copy of the array and add the extra ingredients without mutating the `pizzaBase` variable.
 
-Lets look at another example.
+Let's look at another example.
 
-We have a new order coming in, but we firstly will need to edit the base of the pizza as the new customer is lactose in tolerant!
+We have a new order coming in, but the new customer is lactose intolerant! We need to remove the cheese from the pizza base.
 
-So we could do this by:
+We could do this by:
 
 ```javascript
 
@@ -72,9 +68,7 @@ console.log(pizzaBase);
 
 ```
 
-However, this means that the next customer will not have cheese on the base of their Pizza.
-
-But we could do this is in a immutable way by:
+However, this means that the next customer will not have cheese on the base of their Pizza. We can take away the pizza in an immutable way like this:
 
 ```javascript
 
@@ -89,3 +83,5 @@ console.log(pizzaOrder3);
 //> (2) [🥖, 🍅];
 
 ```
+
+The above examples are ways to make your Javascript immutable, however, Javascript as a language is very flexible and does not adopt this technique by default. There are libraries that can help with this such as [immutable.js](https://immutable-js.github.io/immutable-js/docs/#/)

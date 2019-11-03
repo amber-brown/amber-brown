@@ -1,9 +1,8 @@
 ---
 title: Looking at reduce() in JavaScript
 date: "2019-10-28T23:46:37.121Z"
+description: "A closer look at the reduce() method in Javascript"
 ---
-
-#Looking at reduce() in JavaScript
 
 After spending some time functional programming, I had come across a few scenarios were the `reduce()` method was the best fit for the job. But when first applying this method in my code, I found it somewhat tricky to get the hang of.
 
@@ -39,7 +38,7 @@ Use this when you have repeated items in an array that you will like to count up
 ```JavaScript
 const milkshakes = ['banana', 'vanilla', 'vanilla', 'chocolate', 'strawberry', 'vanilla', 'banana', 'banana', 'chocolate', 'strawberry'];
 
-const milkshakeOrder = milkshakes.reduce( (tally, milkshake) => {
+const milkshakeOrder = milkshakes.reduce((tally, milkshake) => {
   tally[milkshake] = (tally[milkshake] || 0) + 1 ;
   return tally;
 } , {});
@@ -54,7 +53,7 @@ In the `reduce()` method, we have set the start value to be an empty object.
 
 `tally[milkshake]` then sets the key in our object. If it doesn't exist it will create it and if it does then it will overwrite it.
 
-`= (tally[milkshake] || 0) + 1` checks if `tally[milkshake]` exists and gets the value. If it doesn't it returns 0. We then add one to the value.
+`(tally[milkshake] || 0) + 1` checks if `tally[milkshake]` exists and gets the value. If it doesn't it returns 0. We then add one to the value.
 
 The reducer function has then iterated over all of our items in the array to give us the counted results.
 

@@ -62,7 +62,7 @@ The higher order function has then iterated over all of our items in the array t
 Reduce can also allow us to get the total price for a list of cake orders.
 
 ```JavaScript
-const cakesOrders = [
+const cakeOrders = [
   {name: 'Chocolate Muffin', quantity: 8, price: 2.95},
   {name: 'Raspberry Swirl', quantity: 2, price: 1.75},
   {name: 'Carrot Cake', quantity: 7, price: 2.45},

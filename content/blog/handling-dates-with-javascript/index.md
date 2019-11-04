@@ -1,14 +1,12 @@
 ---
 title: Handling Dates with Javascript
 date: "2019-10-25T19:12:03.284Z"
-description: "A closer look at using date and time in Javascript"
+description: "An introduction into using date and time in Javascript and moment.js"
 ---
-
-## introduction
 
 ## The Date Object
 
-To use dates within Javascript we can utilise the `Date` object which is built into Javascript. To initialise it we can write:
+To use dates within Javascript we can utilise the `Date` object. To initialise it we can write:
 
 ```javascript
 const now = new Date()
@@ -28,14 +26,12 @@ console.log(now)
 //> 1572105039416
 ```
 
-In the above code, you will notice that the date is returned as a Unix timestamp. This is the number of milliseconds elapsed since 1 January 1970. This may be useful if you are wanting to store the current time in a database in this format.
+In the above code, you will notice that the date is returned as a Unix timestamp. This is the number of milliseconds elapsed since the 1st January 1970. This may be useful if you are wanting to store the current time in a database in this format.
 
-You can also use the `parse()` method to change a string date into a unix date. For more methods that can be used with a date object, check out the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
-
-## Code Examples
-
-### Example 1
-
-### Example 2
+You can also use the `parse()` method to change a string date into a date object. For more methods that can be used with a date object, check out the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
 
 ## Moment.js
+
+To help manage dates in the browser and in node.js, you can use the [moment.js](https://momentjs.com/) library. Moment.js builds on top of the Javascript Date functionality and includes many convenience functions.
+
+For more information on the use of moment.js you can view this [cheatsheet](https://devhints.io/moment).

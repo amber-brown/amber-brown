@@ -84,4 +84,4 @@ console.log(pizzaOrder3);
 
 ```
 
-The above examples are ways to make your Javascript immutable, however, Javascript as a language is very flexible and does not adopt this technique by default. There are libraries that can help with this such as [immutable.js](https://immutable-js.github.io/immutable-js/docs/#/)
+The above examples are ways to write Javascript in an immutable way. However, Javascript as a language is very flexible and does not adopt this technique by default. There are libraries that can help enforce immutability such as [immutable.js](https://immutable-js.github.io/immutable-js/docs/#/)

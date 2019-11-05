@@ -40,17 +40,6 @@ class Header extends React.Component {
             </h3>
             <p style={{ marginBottom: 0 }}>Personal blog for web development</p>
           </div>
-          <div>
-            <a
-              href="https://github.com/amber-brown"
-              style={{
-                width: "20px",
-                height: "20px",
-              }}
-            >
-              <FontAwesomeIcon icon={["fab", "github"]} />
-            </a>
-          </div>
         </div>
       </header>
     )

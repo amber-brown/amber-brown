@@ -5,11 +5,13 @@ export default class ProgressBar extends React.Component {
   render() {
     return (
       <div>
-        <div
-          className="progress-bar"
-          style={{ width: this.props.progress * 5 }}
-        ></div>
-        <p>Progress: {this.props.progress}</p>
+        <div className="progress-bar">
+          <div
+            className="progress-complete"
+            style={{ width: `${this.props.progress}%` }}
+          ></div>
+        </div>
+        <p>Progress: {this.props.progress}%</p>
       </div>
     )
   }

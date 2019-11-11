@@ -8,9 +8,12 @@ export default class Answer extends React.Component {
 
   render() {
     return (
-      <div className="answer">
+      <button
+        className="answer"
+        onClick={() => this.props.onAnswered(this.props.correct)}
+      >
         <p className="answer-text">{this.props.answer}</p>
-      </div>
+      </button>
     )
   }
 }

@@ -6,8 +6,16 @@ import ProgressBar from "../ProgressBar"
 export default class Quiz extends React.Component {
   constructor(props) {
     super(props)
+
+    this.onAnswered = this.onAnswered.bind(this)
+    this.renderResults = this.renderResults.bind(this)
+    this.renderQuiz = this.renderQuiz.bind(this)
+    this.quizReset = this.quizReset.bind(this)
+
     this.state = {
-      count: 1,
+      count: 0,
+      endOfQuiz: false,
+      points: 0,
       quizData: [
         {
           question: "In which country was the first car radio made?",
@@ -119,24 +127,75 @@ export default class Quiz extends React.Component {
     }
   }
 
-  render() {
+  onAnswered(isCorrect) {
+    this.setState(state => {
+      if (state.count < state.quizData.length - 1) {
+        return {
+          count: state.count + 1,
+          points: isCorrect ? state.points + 1 : state.points,
+        }
+      } else if (state.count === state.quizData.length - 1) {
+        return {
+          endOfQuiz: true,
+          points: isCorrect ? state.points + 1 : state.points,
+        }
+      }
+    })
+  }
+
+  renderQuiz() {
     return (
-      <div class="Quiz">
+      <div class="quiz">
         <ProgressBar
           progress={Math.round(
             (this.state.count / this.state.quizData.length) * 100
           )}
         />
         <p>
-          Question {this.state.count} / {this.state.quizData.length}
+          Question {this.state.count + 1} / {this.state.quizData.length}
         </p>
         <p>{this.state.quizData[this.state.count].question}</p>
         {this.state.quizData[this.state.count].answers.map((value, index) => {
           return (
-            <Answer key={index} answer={value.answer} correct={value.correct} />
+            <Answer
+              key={index}
+              answer={value.answer}
+              correct={value.correct}
+              onAnswered={this.onAnswered.bind(this)}
+            />
           )
         })}
       </div>
     )
+  }
+
+  renderResults() {
+    return (
+      <div>
+        <p>The End!</p>
+        <p>
+          Results: {this.state.points} / {this.state.quizData.length}
+        </p>
+        <button onClick={this.quizReset}>Back to Start!</button>
+      </div>
+    )
+  }
+
+  quizReset() {
+    this.setState(state => {
+      return {
+        count: 0,
+        endOfQuiz: false,
+        points: 0,
+      }
+    })
+  }
+
+  render() {
+    if (this.state.endOfQuiz) {
+      return this.renderResults()
+    } else {
+      return this.renderQuiz()
+    }
   }
 }

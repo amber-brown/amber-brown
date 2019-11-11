@@ -9,7 +9,7 @@ export default class Answer extends React.Component {
   render() {
     return (
       <div className="answer">
-        <p className="answer-text"></p>
+        <p className="answer-text">{this.props.answer}</p>
       </div>
     )
   }

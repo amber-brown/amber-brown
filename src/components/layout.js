@@ -2,16 +2,11 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Link } from "gatsby"
 
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-
 import { rhythm, scale } from "../utils/typography"
 
 import "../styles/style.css"
 
 import Header from "./header"
-
-library.add(fab)
 
 class Layout extends React.Component {
   render() {

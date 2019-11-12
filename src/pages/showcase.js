@@ -1,0 +1,38 @@
+import React from "react"
+
+import Layout from "../components/layout"
+import Quiz from "../components/UIComponents/Quiz"
+
+class Showcase extends React.Component {
+  render() {
+    return (
+      <Layout title="Amber Brown">
+        <p>Here are some of the projects that I have been working on:</p>
+
+        <h2>Quiz</h2>
+        <p>
+          I wanted to look into how storybook.js worked and built some separate
+          UI components. Below you will see the result of this, a quiz!
+        </p>
+        <Quiz />
+
+        <h2>Recipe Book App</h2>
+        <p>
+          As part of learning React, Redux and Redux Sagas, I built a project
+          that incorporated all of these, to see how they work together.
+        </p>
+        <p>
+          You can find this project on my{" "}
+          <a href="https://github.com/amber-brown/recipe-book-frontend">
+            github
+          </a>
+        </p>
+        <video style={{ width: "100%" }} controls>
+          <source src="/recipe-app-desktop-recording.mov" type="video/mp4" />
+        </video>
+      </Layout>
+    )
+  }
+}
+
+export default Showcase

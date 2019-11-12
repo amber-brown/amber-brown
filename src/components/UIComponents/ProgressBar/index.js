@@ -11,7 +11,6 @@ export default class ProgressBar extends React.Component {
             style={{ width: `${this.props.progress}%` }}
           ></div>
         </div>
-        <p>Progress: {this.props.progress}%</p>
       </div>
     )
   }

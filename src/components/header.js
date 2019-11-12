@@ -2,8 +2,6 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Link } from "gatsby"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import { rhythm, scale } from "../utils/typography"
 
 class Header extends React.Component {
@@ -38,7 +36,13 @@ class Header extends React.Component {
                 {title}
               </Link>
             </h3>
-            <p style={{ marginBottom: 0 }}>Personal blog for web development</p>
+            <p>A personal blog for web development</p>
+            <nav>
+              <Link to="/">Blog</Link>
+              <Link to="/showcase" style={{ marginLeft: 10 }}>
+                Showcase
+              </Link>
+            </nav>
           </div>
         </div>
       </header>

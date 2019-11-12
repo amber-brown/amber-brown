@@ -145,16 +145,18 @@ export default class Quiz extends React.Component {
 
   renderQuiz() {
     return (
-      <div class="quiz">
+      <div className="quiz">
         <ProgressBar
           progress={Math.round(
             (this.state.count / this.state.quizData.length) * 100
           )}
         />
-        <p>
+        <p className="question-number">
           Question {this.state.count + 1} / {this.state.quizData.length}
         </p>
-        <p>{this.state.quizData[this.state.count].question}</p>
+        <p className="question-text">
+          {this.state.quizData[this.state.count].question}
+        </p>
         {this.state.quizData[this.state.count].answers.map((value, index) => {
           return (
             <Answer
@@ -171,12 +173,14 @@ export default class Quiz extends React.Component {
 
   renderResults() {
     return (
-      <div>
-        <p>The End!</p>
-        <p>
-          Results: {this.state.points} / {this.state.quizData.length}
+      <div className="results">
+        <p className="end-text">The End!</p>
+        <p className="end-results">
+          You scored: {this.state.points} / {this.state.quizData.length}
         </p>
-        <button onClick={this.quizReset}>Back to Start!</button>
+        <button className="back-to-start" onClick={this.quizReset}>
+          Back to Start!
+        </button>
       </div>
     )
   }

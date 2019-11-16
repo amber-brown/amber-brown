@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Layout from "../components/layout"
 import Quiz from "../components/UIComponents/Quiz"
@@ -23,9 +24,9 @@ class Showcase extends React.Component {
         </p>
         <p>
           You can find this project on my{" "}
-          <a href="https://github.com/amber-brown/recipe-book-frontend">
+          <OutboundLink href="https://github.com/amber-brown/recipe-book-frontend">
             github
-          </a>
+          </OutboundLink>
         </p>
         <video style={{ width: "100%" }} controls>
           <source src="/recipe-app-desktop-recording.mov" type="video/mp4" />

@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "amber-brown",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "My blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "Amber Brown",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
@@ -51,15 +48,13 @@
     "jest": "^24.9.0",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
+  "homepage": "https://amberbrown.co.uk",
+  "keywords": [],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/amber-brown/amber-brown.git"
   },
   "scripts": {
     "build": "gatsby build",

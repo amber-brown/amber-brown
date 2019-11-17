@@ -5,7 +5,7 @@ funstonTheme.headerFontFamily = ["Montserrat", "serif"]
 funstonTheme.bodyFontFamily = ["Oxygen", "serif"]
 funstonTheme.googleFonts = [
   { name: "Montserrat", styles: ["400", "700"] },
-  { name: "Oxygen", styles: ["400", "700"] },
+  { name: "Oxygen", styles: ["400", "700&display=swap"] },
 ]
 funstonTheme.baseLineHeight = 1.6
 funstonTheme.baseFontSize = "18px"

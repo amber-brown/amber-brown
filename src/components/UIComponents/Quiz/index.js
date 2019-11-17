@@ -157,16 +157,18 @@ export default class Quiz extends React.Component {
         <p className="question-text">
           {this.state.quizData[this.state.count].question}
         </p>
-        {this.state.quizData[this.state.count].answers.map((value, index) => {
-          return (
-            <Answer
-              key={index}
-              answer={value.answer}
-              correct={value.correct}
-              onAnswered={this.onAnswered.bind(this)}
-            />
-          )
-        })}
+        <div className="answers-container">
+          {this.state.quizData[this.state.count].answers.map((value, index) => {
+            return (
+              <Answer
+                key={index}
+                answer={value.answer}
+                correct={value.correct}
+                onAnswered={this.onAnswered.bind(this)}
+              />
+            )
+          })}
+        </div>
       </div>
     )
   }

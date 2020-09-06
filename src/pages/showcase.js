@@ -2,7 +2,6 @@ import React from "react"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Layout from "../components/layout"
-import Quiz from "../components/UIComponents/Quiz"
 
 class Showcase extends React.Component {
   render() {

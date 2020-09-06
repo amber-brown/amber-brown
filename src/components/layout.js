@@ -20,8 +20,8 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(32),
-            padding: `${rhythm(5.5)} ${rhythm(3 / 4)}`,
+            maxWidth: rhythm(25),
+            padding: `${rhythm(0.5)} ${rhythm(3 / 4)}`,
           }}
         >
           <main>{children}</main>

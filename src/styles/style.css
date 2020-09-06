@@ -8,8 +8,27 @@ h2 {
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 0;
   color: #383e41;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-size: 26px;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "Roboto";
+  font-size: 22px;
+}
+
+p,
+li {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .gatsby-highlight {
@@ -17,7 +36,7 @@ h2 {
 }
 
 .main-header {
-  height: 200px;
+  height: 130px;
   width: 100%;
   position: relative;
   display: flex;
@@ -28,7 +47,7 @@ h2 {
 .main-header__background {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -100px;
   z-index: -1;
 }
 
@@ -73,20 +92,6 @@ h2 {
   transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
 
-.blog-post__container {
-  margin-top: 70px;
-}
-
-.blog-post__header {
-  display: flex;
-  align-items: center;
-}
-
 .blog-post__title {
-  font-size: 14.4px;
-  margin: 0;
-}
-
-.blog-post__description {
-  font-size: 14px;
+  margin-bottom: 0;
 }

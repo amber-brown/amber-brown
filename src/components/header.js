@@ -27,16 +27,13 @@ class Header extends React.Component {
         <div>
           <nav className="nav">
             <Link to="/" className="nav-link">
+              HOME
+            </Link>
+            <Link to="/blog" className="nav-link">
               BLOG
             </Link>
             <Link to="/showcase" className="nav-link">
               SHOWCASE
-            </Link>
-            <Link to="/showcase" className="nav-link">
-              ABOUT
-            </Link>
-            <Link to="/showcase" className="nav-link">
-              CONTACT
             </Link>
           </nav>
         </div>

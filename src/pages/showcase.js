@@ -10,13 +10,6 @@ class Showcase extends React.Component {
       <Layout title="Amber Brown">
         <p>Here are some of the projects that I have been working on:</p>
 
-        <h2>Quiz</h2>
-        <p>
-          I wanted to look into how storybook.js worked and built some separate
-          UI components. Below you will see the result of this, a quiz!
-        </p>
-        <Quiz />
-
         <h2>Recipe Book App</h2>
         <p>
           As part of learning React, Redux and Redux Sagas, I built a project

@@ -6,6 +6,11 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.bio__text-container h2 {
+  margin-bottom: 0;
 }
 
 .bio__subheading {

@@ -8,8 +8,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
+import { Link } from "gatsby"
+import "./style.css"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -27,20 +27,12 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      {/* <p>
-          Written by <strong>{author}</strong> who lives and works in San
-          Francisco building useful things.
-          {` `}
-          <a href={`https://twitter.com/${social.twitter}`}>
-            You should follow him on Twitter
-          </a>
-        </p> */}
+    <div className="bio__container">
+      <div className="bio__text-container">
+        <h2>Hi, I'm Amber Brown</h2>
+        <p className="bio__subheading">A Front-End Developer</p>
+        <p className="bio__text">Welcome to my blog and digital playground.</p>
+      </div>
     </div>
   )
 }

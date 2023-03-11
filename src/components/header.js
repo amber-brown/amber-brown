@@ -1,13 +1,8 @@
 import React from "react"
-import ReactDOM from "react-dom"
 import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
 
 class Header extends React.Component {
   render() {
-    const { location, rootPath, title } = this.props
-
     return (
       <header className="main-header">
         <div class="main-header__background">

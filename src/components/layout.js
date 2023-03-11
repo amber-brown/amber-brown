@@ -1,8 +1,6 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 import "../styles/style.css"
 

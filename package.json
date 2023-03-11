@@ -43,7 +43,7 @@
     "@storybook/addon-knobs": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addons": "^5.2.5",
-    "@storybook/react": "^5.2.5",
+    "@storybook/react": "^6.5.16",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "prettier": "^1.18.2"

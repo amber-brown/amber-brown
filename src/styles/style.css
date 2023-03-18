@@ -1,36 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 html {
-  background: rgb(245, 244, 240);
+  background: #0e0d0c;
   background-repeat: no-repeat;
   height: 100%;
 }
-h2 {
+
+h1, h2, h3, h4, h5, h6, p, li, a, button {
   font-family: "Roboto";
+  color: #e4e4dc;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-bottom: 16px;
+}
+
+h2 {
   font-size: 30px;
-  font-weight: 500;
-  color: #383e41;
+  font-weight: 600;
+  line-height: 1.2em;
 }
 
 h3 {
-  font-family: "Roboto";
   font-size: 26px;
   font-weight: 500;
 }
 
 h4 {
-  font-family: "Roboto";
   font-size: 22px;
 }
 
 p,
-li {
+li,
+button {
   font-size: 16px;
 }
 
 a {
-  font-family: "Roboto";
   text-decoration: none;
   font-weight: 600;
+}
+
+button {
+  background-color: transparent;
+  color: #e4e4dc;
+  border: 2px solid #e4e4dc;
+  padding: 4px 12px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  color: #e4e4dc;
+  z-index: -1;
+}
+
+button:after {
+  width: 300%;
+  height: 300%;
+  left: -300%;
+  background-color: #6ce1cc;
+  transition: all 800ms ease;
+  color: #e4e4dc;
+}
+
+button:hover {
+  color: #e4e4dc;
+}
+
+button:hover::after {
+  left: -100%;
+  color: #e4e4dc;
+}
+
+hr {
+  margin: 16px 0;
+}
+
+.text-light {
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 .gatsby-highlight {
@@ -66,7 +127,7 @@ a {
   font-family: "Roboto";
   font-weight: bold;
   font-size: 16px;
-  color: #383e41;
+  color: #e4e4dc;
 }
 
 .nav-link::before {
@@ -94,10 +155,12 @@ a {
   transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
 
-.blog-post__title {
-  margin-bottom: 0;
+.home-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.blog-post__title a {
-  font-weight: 400;
+.colour-secondary {
+  color: #6ce1cc;
 }

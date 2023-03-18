@@ -1,0 +1,29 @@
+.blog-post {
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(16, 16, 16, 0.133);
+    border: 2px solid rgba(54, 54, 54, 0.12);
+    padding: 16px;
+    width: 100%;
+    background-color: #0e0d0c;
+}
+
+.blog-post__container {
+    margin: 16px 0;
+}
+
+.blog-post__title {
+    margin-bottom: 4px;
+}
+
+.blog-post__container a {
+    font-weight: 400;
+}
+
+ .blog-post__description {
+    margin-bottom: 0;
+ }
+
+.blog-post__date {
+    margin-bottom: 0;
+    font-size: 14px;
+}

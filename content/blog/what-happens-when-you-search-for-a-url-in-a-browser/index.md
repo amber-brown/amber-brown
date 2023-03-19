@@ -1,7 +1,7 @@
 ---
-title: "How do you see a web page in a browser?"
+title: "Behind the Scenes: How Your Browser Connects to Websites"
 date: "2023-03-11T13:00:00.000Z"
-description: "The process of retrieving a web page via a browser"
+description: " What happens when you type a url into a browser and press enter? A brief overview of DNS caching, HTTP requests and TCP/IP protocol"
 ---
 
 Have you ever wondered what happens when you search for a url in a browser? How are you able to see the information of a particular url you enter into the browsers search bar? Below are the steps fron pressing 'enter' to seeing the page.

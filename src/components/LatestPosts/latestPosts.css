@@ -1,0 +1,36 @@
+.blog-post {
+    border-radius: 10px;
+    border: 2px solid transparent; 
+    padding: 16px;
+    width: 100%;
+}
+
+.blog-post:hover {
+     border: 2px solid #6ce1cc; 
+     box-shadow: 0px 2px 10px rgb(0 0 0 / 24%); 
+}
+
+.blog-post__container {
+    margin: 16px 0;
+}
+
+.blog-post__title {
+    margin-bottom: 8px;
+}
+
+.blog-post__container a {
+    font-weight: 400;
+}
+
+ .blog-post__description {
+    margin-bottom: 0;
+ }
+
+.blog-post__date {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.blog-post__arrow-container {
+    margin-top: 16px;
+}

@@ -1,36 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 html {
-  background: rgb(245, 244, 240);
+  background: #1D1D1D;
   background-repeat: no-repeat;
   height: 100%;
 }
-h2 {
+
+h1, h2, h3, h4, h5, h6, p, li, a, button {
   font-family: "Roboto";
+  color: #e4e4dc;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-bottom: 16px;
+}
+
+h2 {
   font-size: 30px;
-  font-weight: 500;
-  color: #383e41;
+  font-weight: 600;
+  line-height: 1.2em;
 }
 
 h3 {
-  font-family: "Roboto";
   font-size: 26px;
   font-weight: 500;
+  line-height: 1.2em;
 }
 
 h4 {
-  font-family: "Roboto";
   font-size: 22px;
 }
 
 p,
-li {
+li,
+button {
   font-size: 16px;
 }
 
 a {
-  font-family: "Roboto";
   text-decoration: none;
   font-weight: 600;
+}
+
+button {
+  border: 2px solid #e4e4dc;
+  border-radius: 6px;
+  color: #e4e4dc;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #e4e4dc;
+  color: #1D1D1D;
+  transition: width 0.3s ease-out;
+  z-index: -1;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+button:hover {
+  color: #1D1D1D;
+}
+
+
+hr {
+  margin: 16px 0;
+}
+
+.text-light {
+  font-weight: 400;
+  opacity: 0.9;
 }
 
 .gatsby-highlight {
@@ -66,7 +120,7 @@ a {
   font-family: "Roboto";
   font-weight: bold;
   font-size: 16px;
-  color: #383e41;
+  color: #e4e4dc;
 }
 
 .nav-link::before {
@@ -94,10 +148,14 @@ a {
   transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
 
-.blog-post__title {
-  margin-bottom: 0;
+@media only screen and (min-width: 1050px) {
+  .home-container {
+      margin: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 }
 
-.blog-post__title a {
-  font-weight: 400;
+.colour-secondary {
+  color: #6ce1cc;
 }

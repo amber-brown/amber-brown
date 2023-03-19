@@ -6,14 +6,12 @@ import "../styles/style.css"
 
 import Header from "./header"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
+const Layout = ({ children }) => {
     const rootPath = `${__PATH_PREFIX__}/`
 
     return (
-      <React.Fragment>
-        <Header rootPath={rootPath} location={location} title={title} />
+      <>
+        <Header />
         <div
           style={{
             marginLeft: `auto`,
@@ -25,9 +23,8 @@ class Layout extends React.Component {
           <main>{children}</main>
           <footer></footer>
         </div>
-      </React.Fragment>
+      </>
     )
-  }
 }
 
 export default Layout

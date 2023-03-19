@@ -1,7 +1,7 @@
 ---
-title: "Tips for Teaching Remotely"
+title: "5 Tips for Teaching Online Classes"
 date: "2022-05-22T20:00:00.000Z"
-description: "Things I learned from teaching online classes"
+description: "Lessons I learnt from delivering an 8 week online Javascript course"
 ---
 
 Classes taught online are a great way to make learning more accessible. They don’t require attendees to be in a specific location. They allow people who may have other responsibilities to attend without worrying about disrupting others and they also enable students to work wherever is most comfortable. Learning new subjects has never been easier!

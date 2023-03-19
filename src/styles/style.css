@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap");
 html {
-  background: #0e0d0c;
+  background: #1D1D1D;
   background-repeat: no-repeat;
   height: 100%;
 }
@@ -26,6 +26,7 @@ h2 {
 h3 {
   font-size: 26px;
   font-weight: 500;
+  line-height: 1.2em;
 }
 
 h4 {
@@ -44,46 +45,38 @@ a {
 }
 
 button {
-  background-color: transparent;
-  color: #e4e4dc;
   border: 2px solid #e4e4dc;
-  padding: 4px 12px;
-  cursor: pointer;
-  outline: none;
-  border-radius: 3px;
+  border-radius: 6px;
+  color: #e4e4dc;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: transparent;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
-button::before,
-button::after {
+button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
-  width: 100%;
+  width: 0;
   height: 100%;
-  color: #e4e4dc;
+  background-color: #e4e4dc;
+  color: #1D1D1D;
+  transition: width 0.3s ease-out;
   z-index: -1;
 }
 
-button:after {
-  width: 300%;
-  height: 300%;
-  left: -300%;
-  background-color: #6ce1cc;
-  transition: all 800ms ease;
-  color: #e4e4dc;
+button:hover::before {
+  width: 100%;
 }
 
 button:hover {
-  color: #e4e4dc;
+  color: #1D1D1D;
 }
 
-button:hover::after {
-  left: -100%;
-  color: #e4e4dc;
-}
 
 hr {
   margin: 16px 0;
@@ -155,10 +148,12 @@ hr {
   transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
 
-.home-container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
+@media only screen and (min-width: 1050px) {
+  .home-container {
+      margin: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 }
 
 .colour-secondary {

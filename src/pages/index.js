@@ -9,8 +9,8 @@ const BlogIndex = () => {
       <>
         <Header />
         <div className="home-container">
-          <Bio />
-          <LatestPosts />
+            <Bio />
+            <LatestPosts />
         </div>
       </>
     )

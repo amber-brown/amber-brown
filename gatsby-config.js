@@ -176,11 +176,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Amber Brown Blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#1D1D1D`,
         display: `minimal-ui`,
         icon: `content/assets/amber-brown-icon.png`,
       },

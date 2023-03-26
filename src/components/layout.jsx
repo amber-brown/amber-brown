@@ -1,25 +1,23 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { rhythm } from '../utils/typography';
-import '../styles/style.css';
-import Header from './header';
+import styled, { ThemeProvider } from 'styled-components';
+import Header from './Header';
+import GlobalStyles from '../styles/GlobalStyles';
+import theme from '../styles/theme';
+
+const Content = styled.main`
+  margin-top: 80px;
+  padding-bottom: 16px;
+`;
 
 function Layout({ children }) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Header />
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(25),
-          padding: `${rhythm(0.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <main>{children}</main>
-        <footer />
-      </div>
-    </>
+      <Content>{children}</Content>
+      <footer />
+    </ThemeProvider>
   );
 }
 

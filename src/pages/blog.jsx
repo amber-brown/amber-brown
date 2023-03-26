@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import PostTile from '../components/PostTile';
 
-import { graphql, Link } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
+
+const Title = styled.h1`
+  margin-left: 12px;
+`;
 
 function BlogIndex({ data }) {
   const siteTitle = data.site.siteMetadata.title;
@@ -10,31 +16,29 @@ function BlogIndex({ data }) {
 
   return (
     <Layout title={siteTitle}>
-      <div className="blog-post__container">
-        <h2>Blog</h2>
-        {posts.map(({ frontmatter, fields, excerpt }) => {
-          const title = frontmatter.title || fields.slug;
-          return (
-            <article className="blog-post" key={fields.slug}>
-              <header className="blog-post__header">
-                <h4 className="blog-post__title">
-                  <Link style={{ boxShadow: 'none' }} to={fields.slug}>
-                    {title}
-                  </Link>
-                </h4>
-              </header>
-              <section>
-                <p
-                  className="blog-post__description"
-
-                >
-                  {frontmatter.description || excerpt}
-
-                </p>
-              </section>
-            </article>
-          );
-        })}
+      <div
+        style={{
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          maxWidth: '900px',
+          padding: '0 16px',
+        }}
+      >
+        <div>
+          <Title>Blog</Title>
+          {posts.map(({ frontmatter, fields, excerpt }) => {
+            const title = frontmatter.title || fields.slug;
+            return (
+              <PostTile
+                key={fields.slug}
+                link={fields.slug}
+                date={frontmatter.date}
+                title={title}
+                description={frontmatter.description || excerpt}
+              />
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );

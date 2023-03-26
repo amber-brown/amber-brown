@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import Header from './Header';
+import Header from './Headerx';
 import GlobalStyles from '../styles/GlobalStyles';
 import theme from '../styles/theme';
 

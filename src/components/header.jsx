@@ -3,18 +3,21 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
-  height: 130px;
+  background-color: ${(props) => props.theme.colors.background};
+  height: 80px;
   width: 100%;
   position: relative;
   display: flex;
+  position: fixed;
   justify-content: flex-end;
-  padding: 20px;
+  align-items: center;
+  top: 0;
+  right: 0;
+  z-index: 1;
 `;
 
 const Navigation = styled.nav`
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  padding-right: 16px;
 `;
 
 const NavigationLink = styled(Link)`
@@ -22,7 +25,6 @@ const NavigationLink = styled(Link)`
   position: relative;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
   color: ${(props) => props.theme.colors.primary};
 
   &::before {

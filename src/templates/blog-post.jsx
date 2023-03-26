@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-
+import styled from 'styled-components';
 import Layout from '../components/Layout';
-import { rhythm, scale } from '../utils/typography';
+
+const Container = styled.article`
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+`;
 
 function BlogPostTemplate({
   data: {
@@ -14,25 +19,10 @@ function BlogPostTemplate({
 
   return (
     <Layout title={siteTitle}>
-      <article>
+      <Container>
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: 'block',
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+          <h1>{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
         </header>
         <section
           // eslint-disable-next-line react/no-danger
@@ -41,10 +31,10 @@ function BlogPostTemplate({
         />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: '16px',
           }}
         />
-      </article>
+      </Container>
 
       <nav>
         <ul

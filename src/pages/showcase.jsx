@@ -1,8 +1,6 @@
 import React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-
 import Layout from '../components/Layout';
-import { rhythm } from '../utils/typography';
 
 function Showcase() {
   return (
@@ -11,8 +9,8 @@ function Showcase() {
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(25),
-          padding: `${rhythm(0.5)} ${rhythm(3 / 4)}`,
+          maxWidth: '900px',
+          padding: '0 16px',
         }}
       >
         <p>Here are some of the projects that I have been working on:</p>

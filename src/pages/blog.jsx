@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import PostTile from '../components/PostTile';
 
-import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import { rhythm } from '../utils/typography';
+
+const Title = styled.h1`
+  margin-left: 12px;
+`;
 
 function BlogIndex({ data }) {
   const siteTitle = data.site.siteMetadata.title;
@@ -15,25 +20,22 @@ function BlogIndex({ data }) {
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(25),
-          padding: `${rhythm(0.5)} ${rhythm(3 / 4)}`,
+          maxWidth: '900px',
+          padding: '0 16px',
         }}
       >
         <div>
-          <h2>Blog</h2>
+          <Title>Blog</Title>
           {posts.map(({ frontmatter, fields, excerpt }) => {
             const title = frontmatter.title || fields.slug;
             return (
-              <article key={fields.slug}>
-                <header>
-                  <h4>
-                    <Link to={fields.slug}>{title}</Link>
-                  </h4>
-                </header>
-                <section>
-                  <p>{frontmatter.description || excerpt}</p>
-                </section>
-              </article>
+              <PostTile
+                key={fields.slug}
+                link={fields.slug}
+                date={frontmatter.date}
+                title={title}
+                description={frontmatter.description || excerpt}
+              />
             );
           })}
         </div>

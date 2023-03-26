@@ -1,15 +1,21 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import '../styles/style.css';
+import styled, { ThemeProvider } from 'styled-components';
 import Header from './Header';
-import theme from '../utils/theme';
+import GlobalStyles from '../styles/GlobalStyles';
+import theme from '../styles/theme';
+
+const Content = styled.main`
+  margin-top: 80px;
+  padding-bottom: 16px;
+`;
 
 function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Header />
-      <main>{children}</main>
+      <Content>{children}</Content>
       <footer />
     </ThemeProvider>
   );

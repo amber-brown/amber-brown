@@ -6,6 +6,8 @@ import LatestPosts from '../components/LatestPosts';
 import Layout from '../components/Layout';
 
 const HomeContainer = styled.div`
+  margin: 16px;
+
   @media only screen and (min-width: 1050px) {
       margin: 0 5%;
       display: grid;
@@ -13,11 +15,22 @@ const HomeContainer = styled.div`
   }
 `;
 
+const SectionContainer = styled.div`
+  margin: 0 16px 16px 16px;
+  max-width: 500px;
+
+  @media only screen and (min-width: 1050px) {
+      margin: 0;
+  }
+`;
+
 function BlogIndex() {
   return (
     <Layout>
       <HomeContainer>
-        <Bio />
+        <SectionContainer>
+          <Bio />
+        </SectionContainer>
         <LatestPosts />
       </HomeContainer>
     </Layout>

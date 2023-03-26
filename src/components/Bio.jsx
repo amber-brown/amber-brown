@@ -4,13 +4,17 @@ import GihubLogo from './LogoGithub';
 import LinkedinLogo from './LogoLinkedin';
 import Button from '../styledComponents/Button';
 
+const MainTitle = styled.h1`
+  margin-top: 0;
+`;
+
 const BioContainer = styled.div`
-  margin: '0 16px 24px 16px'
+  margin: '0 16px 24px 16px';
 `;
 
 const BioText = styled.h2`
     font-size: 36px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
 `;
 
 const LightText = styled.span`
@@ -28,7 +32,7 @@ const Logo = styled.div`
 `;
 
 const IntroductionText = styled.p`
-  color: ${(props) => props.theme.colors.secondary}
+  color: ${(props) => props.theme.colors.secondary};
 `;
 
 function Bio() {
@@ -40,16 +44,14 @@ function Bio() {
         {' '}
         <LightText>a</LightText>
       </BioText>
-      <h1>
+      <MainTitle>
         SOFTWARE ENGINEER
         <br />
         <LightText>based in </LightText>
         <b>LONDON</b>
-      </h1>
+      </MainTitle>
       <IntroductionText>
-        Javascript / typescript engineer with experience in building
-        <br />
-        solutions for mobile and web
+        Javascript / typescript engineer with experience in building solutions for mobile and web
       </IntroductionText>
       <LogoContainer>
         <Logo>

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import useWindowDimensions from '../hooks/usewindowDimensions.ts';
 
 const HeaderContainer = styled.header`
   background-color: ${(props) => props.theme.colors.background};
@@ -53,14 +56,35 @@ const NavigationLink = styled(Link)`
   }
 `;
 
-function Header() {
-  return (
-    <HeaderContainer>
+const Hamburger = styled(FontAwesomeIcon)`
+  color: ${(props) => props.theme.colors.secondary};
+  font-size: 24px;
+  cursor: pointer;
+`;
+
+function Nav({ isMobile, showMobileNav }) {
+  if (!isMobile || (isMobile && showMobileNav)) {
+    return (
       <Navigation>
         <NavigationLink to="/">HOME</NavigationLink>
         <NavigationLink to="/blog">BLOG</NavigationLink>
         <NavigationLink to="/showcase">SHOWCASE</NavigationLink>
       </Navigation>
+    );
+  }
+}
+
+function Header() {
+  const { width } = useWindowDimensions();
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
+  const isMobile = () => width < 768;
+
+  return (
+    <HeaderContainer>
+      {isMobile()
+      && (<Hamburger icon={faBars} onClick={() => setShowMobileNav(!showMobileNav)} />)}
+      <Nav isMobile={isMobile()} showMobileNav={isMobile() && showMobileNav} />
     </HeaderContainer>
   );
 }
